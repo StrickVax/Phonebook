@@ -7,10 +7,14 @@ LinkedList::LinkedList()
 
 void LinkedList::addToFront(int val)
 {
-        Node *temp = new Node;
-        temp->value = val;
-        temp->next = head;
-        head = temp;
+    Node *temp = new Node;
+    temp->value = val;
+    temp->next = head;
+    if (head != nullptr)
+    {
+        head->prev = temp;
+    }
+    head = temp;
 }
 
 void LinkedList::addToBack()
@@ -32,8 +36,31 @@ void LinkedList::information()
     {
         while (head != nullptr)
         {
-            cout << head->value << " -> ";
+
+            cout << head->value;
             head = head->next;
+            if (head != nullptr)
+            {
+                cout << " -> ";
+            }
+        }
+    }
+}
+
+void LinkedList::scrollBack()
+{
+    while (head->next != nullptr)
+    {
+        head = head->next;
+    }
+
+    while (head != nullptr)
+    {
+        cout << head->value;
+        head = head->prev;
+        if (head != nullptr)
+        {
+            cout << " <- ";
         }
     }
 }

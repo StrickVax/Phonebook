@@ -19,6 +19,7 @@ struct LinkedList
     void addToBack();
     void insert();
     void information();
+    void scrollBack();
     void setInformation();
 };
 
