@@ -54,14 +54,23 @@ void LinkedList::scrollBack()
         head = head->next;
     }
 
-    while (head != nullptr)
+    while (head->prev != nullptr)
     {
         cout << head->value;
-        head = head->prev;
         if (head != nullptr)
         {
             cout << " <- ";
         }
+        head = head->prev;
+    }
+    cout << head->value << endl;
+}
+
+void LinkedList::scrollForward()
+{
+    while (head->prev != nullptr)
+    {
+        head = head->prev;
     }
 }
 

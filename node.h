@@ -20,6 +20,7 @@ struct LinkedList
     void insert();
     void information();
     void scrollBack();
+    void scrollForward();
     void setInformation();
 };
 

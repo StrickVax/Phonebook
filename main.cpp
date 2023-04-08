@@ -11,6 +11,7 @@ int main()
     LL.addToFront(5);
     LL.addToFront(3);
     LL.scrollBack();
+    LL.scrollForward();
     LL.information();
     return 0;
 }
