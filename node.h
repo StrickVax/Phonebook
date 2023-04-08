@@ -22,6 +22,8 @@ struct LinkedList
     void scrollBack();
     void scrollForward();
     void setInformation();
+
+    void populate(int);
 };
 
 #endif

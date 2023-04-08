@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include "node.h"
 
 LinkedList::LinkedList()
@@ -34,7 +35,7 @@ void LinkedList::information()
 
     else
     {
-        while (head != nullptr)
+        while (head->next != nullptr)
         {
 
             cout << head->value;
@@ -44,6 +45,7 @@ void LinkedList::information()
                 cout << " -> ";
             }
         }
+        cout << head->value << endl;
     }
 }
 
@@ -76,4 +78,12 @@ void LinkedList::scrollForward()
 
 void LinkedList::setInformation()
 {
+}
+
+void LinkedList::populate(int val = 1)
+{
+    for (int i = 0; i < val; i++)
+    {
+        addToFront((rand() % 30 + 1));
+    }
 }
