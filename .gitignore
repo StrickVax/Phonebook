@@ -3,5 +3,8 @@
 # Compiled version of the code
 /main.exe
 
+# debugging files
+/launch.json
+
 # VS code quirks
 /.vscode
